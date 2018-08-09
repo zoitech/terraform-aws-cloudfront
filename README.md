@@ -52,3 +52,8 @@ module "my_cloudfront" {
   ssl_support_method       = "sni-only"
 }
 ```
+
+#### Outputs
+The following outputs are possible:
+* domain_name  (The domain name corresponding to the distribution. For example: d604721fxaaqy9.cloudfront.net)
+* hosted_zone_id (The CloudFront Route 53 zone ID that can be used to route an Alias Resource Record Set to. This attribute is simply an alias for the zone ID Z2FDTNDATAQYW2.)
