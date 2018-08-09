@@ -8,7 +8,7 @@ The following resources are created:
 ## Usage
 ### Specify this Module as Source
 ```hcl
-module "alb" {
+module "my_cloudfront" {
   source = "git::https://github.com/zoitech/terraform-aws-cloudfront.git"
 
   # Or to specifiy a particular module version:
