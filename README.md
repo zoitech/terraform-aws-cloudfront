@@ -15,6 +15,7 @@ module "alb" {
   source = "git::https://github.com/zoitech/terraform-aws-cloudfront.git?ref=v0.0.1"
 ```
 ### Usage Example
+```
 module "my_cloudfront" {
   source          = "git::https://github.com/zoitech/terraform-aws-cloudfront.git"
   dns_domain_name = "mydomain.s3.amazonaws.com"
@@ -50,4 +51,4 @@ module "my_cloudfront" {
   minimum_protocol_version = "TLSv1.1_2016"
   ssl_support_method       = "sni-only"
 }
-
+```
