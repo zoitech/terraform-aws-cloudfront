@@ -52,6 +52,7 @@ module "my_cloudfront" {
     response_code         = "200"            #Optional
     response_page_path    = "/index.html"}   #Optional
   ]
+  
   # Geo Restrictions
   restriction_type = "none"
 
