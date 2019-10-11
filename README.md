@@ -39,10 +39,19 @@ module "my_cloudfront" {
   # Default Cache Behavior Settings
   default_cache_behavior_allowed_methods = ["GET", "HEAD"]
   default_cache_behavior_cached_methods  = ["GET", "HEAD"]
+  default_cache_behavior_forwarded_values_headers = ["origin"]
   target_origin_id                       = "s3-my-origin-id"
   viewer_protocol_policy                 = "redirect-to-https"
   price_class                            = "PriceClass_100"
 
+  # Custom Error Response
+  custom_error_response = [
+    {
+    error_caching_min_ttl = "86400"          #Optional
+    error_code            = "404"            #Required
+    response_code         = "200"            #Optional
+    response_page_path    = "/index.html"}   #Optional
+  ]
   # Geo Restrictions
   restriction_type = "none"
 

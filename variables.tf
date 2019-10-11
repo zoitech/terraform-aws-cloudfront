@@ -98,6 +98,7 @@ variable "ssl_support_method" {
 } 
 
 variable "custom_error_response" {
+  description = "(Optional) - One or more custom error response elements (multiples allowed)."
   type = "list"
   default = []
 }

@@ -19,13 +19,11 @@ resource "aws_cloudfront_distribution" "distribution" {
     prefix          = "${var.logging_config_prefix}"
   }
  
-
   aliases = "${var.aliases}" #list
 
   # Custom Error response
   custom_error_response = ["${var.custom_error_response}" ] #list
   
-
   default_cache_behavior {
     allowed_methods  = "${var.default_cache_behavior_allowed_methods}" #list
     cached_methods   = "${var.default_cache_behavior_cached_methods}"  #list
