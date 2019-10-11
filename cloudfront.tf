@@ -18,8 +18,13 @@ resource "aws_cloudfront_distribution" "distribution" {
     bucket          = "${var.logging_config_bucket}"
     prefix          = "${var.logging_config_prefix}"
   }
+ 
 
   aliases = "${var.aliases}" #list
+
+  # Custom Error response
+  custom_error_response = ["${var.custom_error_response}" ] #list
+  
 
   default_cache_behavior {
     allowed_methods  = "${var.default_cache_behavior_allowed_methods}" #list
@@ -32,6 +37,8 @@ resource "aws_cloudfront_distribution" "distribution" {
       cookies {
         forward = "none"
       }
+
+      headers = "${var.default_cache_behavior_forwarded_values_headers}" #list
     }
 
     viewer_protocol_policy = "${var.viewer_protocol_policy}"

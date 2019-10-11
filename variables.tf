@@ -58,6 +58,11 @@ variable "default_cache_behavior_cached_methods" {
   description = "(Required) - Controls whether CloudFront caches the response to requests using the specified HTTP methods."
 }
 
+variable "default_cache_behavior_forwarded_values_headers" {
+  type        = "list"
+  description = "(Required) - Specifies the Headers, if any, that you want CloudFront to vary upon for this cache behavior. Specify * to include all headers."
+}
+
 variable "target_origin_id" {
   description = "(Required) - The value of ID for the origin that you want CloudFront to route requests to when a request matches the path pattern either for a cache behavior or for the default cache behavior."
 }
@@ -91,3 +96,8 @@ variable "minimum_protocol_version" {
 variable "ssl_support_method" {
  description = "Specifies how you want CloudFront to serve HTTPS requests. One of vip or sni-only. Required if you specify acm_certificate_arn or iam_certificate_id. NOTE: vip causes CloudFront to use a dedicated IP address and may incur extra charges."
 } 
+
+variable "custom_error_response" {
+  type = "list"
+  default = []
+}
