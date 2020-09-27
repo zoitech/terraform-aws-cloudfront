@@ -44,22 +44,22 @@ variable "logging_config_prefix" {
 }
 
 variable "aliases" {
-  type        = "list"
+  type        = list(string)
   description = "(Optional) - Extra CNAMEs (alternate domain names), if any, for this distribution."
 }
 
 variable "default_cache_behavior_allowed_methods" {
-  type        = "list"
+  type        = list(string)
   description = "(Required) - Controls which HTTP methods CloudFront processes and forwards to your Amazon S3 bucket or your custom origin."
 }
 
 variable "default_cache_behavior_cached_methods" {
-  type        = "list"
+  type        = list(string)
   description = "(Required) - Controls whether CloudFront caches the response to requests using the specified HTTP methods."
 }
 
 variable "default_cache_behavior_forwarded_values_headers" {
-  type        = "list"
+  type        = list(string)
   description = "(Required) - Specifies the Headers, if any, that you want CloudFront to vary upon for this cache behavior. Specify * to include all headers."
 }
 
@@ -81,7 +81,7 @@ variable "restriction_type" {
 }
 
 variable "restriction_locations" {
-  type        = "list"
+  type        = list(string)
   description = "(Optional) - The ISO 3166-1-alpha-2 codes for which you want CloudFront either to distribute your content (whitelist) or not distribute your content (blacklist)."
   default     = []
 }
@@ -91,14 +91,20 @@ variable "acm_certificate_arn" {
 }
 
 variable "minimum_protocol_version" {
- description = "The minimum version of the SSL protocol that you want CloudFront to use for HTTPS connections. One of SSLv3, TLSv1, TLSv1_2016, TLSv1.1_2016 or TLSv1.2_2018. Default: TLSv1. NOTE: If you are using a custom certificate (specified with acm_certificate_arn or iam_certificate_id), and have specified sni-only in ssl_support_method, TLSv1 or later must be specified. If you have specified vip in ssl_support_method, only SSLv3 or TLSv1 can be specified. If you have specified cloudfront_default_certificate, TLSv1 must be specified."
-} 
+  description = "The minimum version of the SSL protocol that you want CloudFront to use for HTTPS connections. One of SSLv3, TLSv1, TLSv1_2016, TLSv1.1_2016 or TLSv1.2_2018. Default: TLSv1. NOTE: If you are using a custom certificate (specified with acm_certificate_arn or iam_certificate_id), and have specified sni-only in ssl_support_method, TLSv1 or later must be specified. If you have specified vip in ssl_support_method, only SSLv3 or TLSv1 can be specified. If you have specified cloudfront_default_certificate, TLSv1 must be specified."
+}
+
 variable "ssl_support_method" {
- description = "Specifies how you want CloudFront to serve HTTPS requests. One of vip or sni-only. Required if you specify acm_certificate_arn or iam_certificate_id. NOTE: vip causes CloudFront to use a dedicated IP address and may incur extra charges."
-} 
+  description = "Specifies how you want CloudFront to serve HTTPS requests. One of vip or sni-only. Required if you specify acm_certificate_arn or iam_certificate_id. NOTE: vip causes CloudFront to use a dedicated IP address and may incur extra charges."
+}
 
 variable "custom_error_response" {
   description = "(Optional) - One or more custom error response elements (multiples allowed)."
-  type = "list"
-  default = []
+  type        = any
+  default     = []
+}
+
+variable "region" {
+  description = "region"
+  default     = "eu-west-1"
 }
