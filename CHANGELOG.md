@@ -1,3 +1,7 @@
+## 1.0.0
+ENHANCEMENTS:
+* Upgrade TF to version 12 ([#4](https://github.com/zoitech/terraform-aws-cloudfront/issues/4))
+
 ## 0.0.2 (Unreleased)
 ENHANCEMENTS:
 

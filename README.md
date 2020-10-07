@@ -57,7 +57,7 @@ module "my_cloudfront" {
   restriction_type = "none"
 
   # Certificate
-  acm_certificate_arn      = "${data.aws_acm_certificate.my_acm_certificate.arn}"
+  acm_certificate_arn      = data.aws_acm_certificate.my_acm_certificate.arn
   minimum_protocol_version = "TLSv1.1_2016"
   ssl_support_method       = "sni-only"
 }
