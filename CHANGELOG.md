@@ -1,3 +1,7 @@
+## 2.0.0
+ENHANCEMENT:
+* Upgrade to terraform 0.13 [#6](https://github.com/zoitech/terraform-aws-cloudfront/issues/6)
+
 ## 1.0.0
 ENHANCEMENTS:
 * Upgrade TF to version 12 ([#4](https://github.com/zoitech/terraform-aws-cloudfront/issues/4))
