@@ -21,6 +21,7 @@ module "my_cloudfront" {
   dns_domain_name = "mydomain.s3.amazonaws.com"
   origin_path     = "/mypath"
   origin_id       = "s3-myorigin"
+  origin_access_identity = "origin-access-identity/cloudfront/ABCDEFG1234567"
 
   #s3_origin_config - origin_access_identity
   state_enabled       = true
