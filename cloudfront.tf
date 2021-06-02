@@ -3,9 +3,9 @@ resource "aws_cloudfront_distribution" "distribution" {
     domain_name = "${var.dns_domain_name}"
     origin_id   = "${var.origin_id}"
 
-    # s3_origin_config {
-    #   origin_access_identity = "origin-access-identity/cloudfront/ABCDEFG1234567"
-    # }
+    s3_origin_config {
+      origin_access_identity = "${var.origin_access_identity}"
+    }
   }
 
   enabled             = "${var.state_enabled}"

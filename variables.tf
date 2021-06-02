@@ -11,6 +11,11 @@ variable "origin_id" {
   description = "(Required) - A unique identifier for the origin."
 }
 
+variable "origin_access_identity" {
+  description = "(Optional) - Allow access from origin access identity."
+  default     = ""
+}
+
 variable "state_enabled" {
   description = "(Required) - Whether the distribution is enabled to accept end user requests for content."
   default     = true
