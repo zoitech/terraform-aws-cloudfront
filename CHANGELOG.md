@@ -1,3 +1,7 @@
+## 4.0.0
+ENHANCEMENT:
+* Upgrade to terraform 1.0 [#11](https://github.com/zoitech/terraform-aws-cloudfront/issues/11)
+
 ## 3.0.0
 ENHANCEMENT:
 * Upgrade to terraform 0.14 [#9](https://github.com/zoitech/terraform-aws-cloudfront/issues/9)
