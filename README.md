@@ -12,7 +12,7 @@ module "my_cloudfront" {
   source = "git::https://github.com/zoitech/terraform-aws-cloudfront.git"
 
   # Or to specifiy a particular module version:
-  source = "git::https://github.com/zoitech/terraform-aws-cloudfront.git?ref=2.0.0"
+  source = "git::https://github.com/zoitech/terraform-aws-cloudfront.git?ref=2.1.0"
 ```
 ### Usage Example
 ```

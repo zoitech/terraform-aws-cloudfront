@@ -1,12 +1,23 @@
+# 2.1.0
+
+ENHANCEMENTS:
+* Upgraded terraform version to 0.14  [#9](https://github.com/zoitech/terraform-aws-cloudfront/issues/9)
+
+BACKWARDS INCOMPATIBILITIES / NOTES:
+* Works with terraform 0.14.x
+
 ## 2.0.0
+
 ENHANCEMENT:
 * Upgrade to terraform 0.13 [#6](https://github.com/zoitech/terraform-aws-cloudfront/issues/6)
 
 ## 1.0.0
+
 ENHANCEMENTS:
 * Upgrade TF to version 12 ([#4](https://github.com/zoitech/terraform-aws-cloudfront/issues/4))
 
 ## 0.0.2 (Unreleased)
+
 ENHANCEMENTS:
 
 * Add custom response error referrenced in issue ([#3](https://github.com/zoitech/terraform-aws-cloudfront/issues/3))
