@@ -1,3 +1,7 @@
+## 2.0.1
+ENHANCEMENT:
+* Add outputs for Terraform [#14](https://github.com/zoitech/terraform-aws-cloudfront/issues/14)
+
 ## 2.0.0
 ENHANCEMENT:
 * Upgrade to terraform 0.13 [#6](https://github.com/zoitech/terraform-aws-cloudfront/issues/6)
