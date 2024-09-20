@@ -1,3 +1,7 @@
+## 2.1.0
+ENHANCEMENT:
+* Add variable to tag Cloudfront distribution
+
 ## 2.0.1
 ENHANCEMENT:
 * Add outputs for Terraform [#14](https://github.com/zoitech/terraform-aws-cloudfront/issues/14)

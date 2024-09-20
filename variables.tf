@@ -108,3 +108,9 @@ variable "region" {
   description = "region"
   default     = "eu-west-1"
 }
+
+variable "tags" {
+  description = "Tags to be added to the distribution"
+  type        = map(string)
+  default     = {}
+}

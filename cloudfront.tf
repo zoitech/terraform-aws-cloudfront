@@ -72,5 +72,7 @@ resource "aws_cloudfront_distribution" "distribution" {
     minimum_protocol_version = var.minimum_protocol_version
     ssl_support_method       = var.ssl_support_method
   }
+
+  tags = var.tags
 }
 
